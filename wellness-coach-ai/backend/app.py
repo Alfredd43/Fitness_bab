@@ -169,7 +169,8 @@ if __name__ == '__main__':
         existing_user = User.query.filter_by(username=default_username).first()
         if not existing_user:
             hashed_password = generate_password_hash('password123', method='sha256')
-            new_user = User(username=default_username, password=hashed_password)
+            hashed_password = generate_password_hash('password123')
+ new_user = User(username=default_username, password=hashed_password)
             db.session.add(new_user)
             db.session.commit()
     app.run(debug=True)
