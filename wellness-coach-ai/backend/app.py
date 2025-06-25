@@ -163,4 +163,13 @@ def get_nutrition():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
+
+        # Create a default user for testing if one does not exist
+        default_username = 'testuser'
+        existing_user = User.query.filter_by(username=default_username).first()
+        if not existing_user:
+            hashed_password = generate_password_hash('password123', method='sha256')
+            new_user = User(username=default_username, password=hashed_password)
+            db.session.add(new_user)
+            db.session.commit()
     app.run(debug=True)
