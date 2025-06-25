@@ -114,6 +114,11 @@ def log_exercise():
     db.session.commit()
     return jsonify({'message': 'Exercise log added successfully'}), 201
 
+@app.route('/api/user', methods=['GET'])
+@login_required
+def get_user():
+ return jsonify({'id': current_user.id, 'username': current_user.username}), 200
+
 @app.route('/user/logs/food', methods=['GET'])
 @login_required
 def get_food_logs():
