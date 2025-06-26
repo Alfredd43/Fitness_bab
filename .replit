@@ -1,0 +1,8 @@
+modules = ["python-3.12", "cpp-clang14", "c-clang14", "nodejs-20"]
+run = "node index.js"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "node index.js"]
