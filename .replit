@@ -18,3 +18,12 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd wellness-coach-ai/frontend && npm run dev -- --host 0.0.0.0 --port 5173"
+
+[[workflows.workflow]]
+name = "Run Backend"
+author = 37172618
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd wellness-coach-ai/backend && python app.py"

@@ -1,14 +1,15 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface User {
   id: number;
   username: string;
-  email: string;
 }
 
 interface AuthContextType {
   user: User | null;
-  login: (user: User) => void;
+  login: (username: string, password: string) => Promise<boolean>;
+  register: (username: string, password: string) => Promise<boolean>;
   logout: () => void;
   isAuthenticated: boolean;
 }
@@ -26,18 +27,63 @@ export const useAuth = () => {
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
 
-  const login = (userData: User) => {
-    setUser(userData);
+  const login = async (username: string, password: string): Promise<boolean> => {
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+        credentials: 'include',
+      });
+
+      if (response.ok) {
+        const userData = await response.json();
+        setUser(userData);
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error('Login error:', error);
+      return false;
+    }
   };
 
-  const logout = () => {
+  const register = async (username: string, password: string): Promise<boolean> => {
+    try {
+      const response = await fetch('/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+        credentials: 'include',
+      });
+
+      return response.ok;
+    } catch (error) {
+      console.error('Registration error:', error);
+      return false;
+    }
+  };
+
+  const logout = async () => {
+    try {
+      await fetch('/logout', {
+        method: 'POST',
+        credentials: 'include',
+      });
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
     setUser(null);
   };
 
   const isAuthenticated = user !== null;
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated }}>
+    <AuthContext.Provider value={{ user, login, register, logout, isAuthenticated }}>
       {children}
     </AuthContext.Provider>
   );

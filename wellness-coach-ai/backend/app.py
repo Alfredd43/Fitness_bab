@@ -13,7 +13,7 @@ dotenv.load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+CORS(app, supports_credentials=True, origins=['http://localhost:5173', 'http://0.0.0.0:5173'])
 
 # Configuration
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'a_super_secret_key_replace_me')
@@ -185,4 +185,4 @@ if __name__ == '__main__':
         db.session.commit()
         print(f"Created test user: {default_username}")
 
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
