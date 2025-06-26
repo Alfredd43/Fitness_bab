@@ -17,10 +17,23 @@ class User(UserMixin, db.Model):
 class FoodLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    food_description = db.Column(db.String(255), nullable=False)
-    quantity = db.Column(db.String(100), nullable=False)
+    food_item = db.Column(db.String(255), nullable=False)
     calories = db.Column(db.Integer)
+    protein = db.Column(db.Float)
+    carbs = db.Column(db.Float)
+    fat = db.Column(db.Float)
     logged_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'food_item': self.food_item,
+            'calories': self.calories,
+            'protein': self.protein,
+            'carbs': self.carbs,
+            'fat': self.fat,
+            'logged_at': self.logged_at.isoformat()
+        }
 
 class WaterLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -28,10 +41,24 @@ class WaterLog(db.Model):
     amount_ml = db.Column(db.Integer, nullable=False)
     logged_at = db.Column(db.DateTime, default=datetime.utcnow)
 
+    def serialize(self):
+        return {
+            'id': self.id,
+            'amount_ml': self.amount_ml,
+            'logged_at': self.logged_at.isoformat()
+        }
+
 class ExerciseLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     exercise_type = db.Column(db.String(255), nullable=False)
     duration_minutes = db.Column(db.Integer, nullable=False)
-    intensity = db.Column(db.String(50), nullable=False)
     logged_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'exercise_type': self.exercise_type,
+            'duration_minutes': self.duration_minutes,
+            'logged_at': self.logged_at.isoformat()
+        }

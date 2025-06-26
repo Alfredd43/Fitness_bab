@@ -86,7 +86,7 @@ def logout():
     logout_user()
     return jsonify({'message': 'Logged out successfully'}), 200
 
-@app.route('/nutrition', methods=['POST'])
+@app.route('/get_nutrition', methods=['POST'])
 @login_required
 def get_nutrition():
     food_description = request.get_json().get('food_description')
@@ -122,7 +122,7 @@ def log_food():
 @login_required
 def log_water():
     data = request.get_json()
-    new_log = WaterLog(amount_ml=data.get('amount_ml'), user_id=current_user.id)
+    new_log = WaterLog(amount_ml=data.get('amount'), user_id=current_user.id)
     db.session.add(new_log)
     db.session.commit()
     return jsonify({'message': 'Water log added successfully'}), 201
@@ -180,7 +180,7 @@ if __name__ == '__main__':
         default_username = "testuser"
         default_password = "password123"
 
-        new_user = User(username=default_username, password_hash=generate_password_hash(default_password))
+        new_user = User(username=default_username, password=generate_password_hash(default_password))
         db.session.add(new_user)
         db.session.commit()
         print(f"Created test user: {default_username}")
