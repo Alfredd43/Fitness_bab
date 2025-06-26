@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useAuth } from './AuthContext';
 import LogoutButton from './LogoutButton';
@@ -14,17 +15,26 @@ const DashboardPage: React.FC = () => {
       if (!user) return;
 
       try {
-        const foodResponse = await fetch('/user/logs/food');
-        const waterResponse = await fetch('/user/logs/water');
-        const exerciseResponse = await fetch('/user/logs/exercise');
+        const baseUrl = 'http://127.0.0.1:5000';
+        
+        const [foodResponse, waterResponse, exerciseResponse] = await Promise.all([
+          fetch(`${baseUrl}/user/logs/food`),
+          fetch(`${baseUrl}/user/logs/water`),
+          fetch(`${baseUrl}/user/logs/exercise`)
+        ]);
 
-        const foodData = await foodResponse.json();
-        const waterData = await waterResponse.json();
-        const exerciseData = await exerciseResponse.json();
-
-        setFoodLogs(foodData);
-        setWaterLogs(waterData);
-        setExerciseLogs(exerciseData);
+        if (foodResponse.ok) {
+          const foodData = await foodResponse.json();
+          setFoodLogs(foodData);
+        }
+        if (waterResponse.ok) {
+          const waterData = await waterResponse.json();
+          setWaterLogs(waterData);
+        }
+        if (exerciseResponse.ok) {
+          const exerciseData = await exerciseResponse.json();
+          setExerciseLogs(exerciseData);
+        }
       } catch (error) {
         console.error('Error fetching logs:', error);
       }
