@@ -84,9 +84,6 @@ const LogWaterPage: React.FC = () => {
 };
 
 export default LogWaterPage;
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import LogoutButton from './LogoutButton';
 
 const LogWaterPage: React.FC = () => {
   const [amount, setAmount] = useState('');

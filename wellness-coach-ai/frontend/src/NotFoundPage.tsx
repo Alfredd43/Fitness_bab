@@ -13,8 +13,6 @@ const NotFoundPage: React.FC = () => {
 };
 
 export default NotFoundPage;
-import React from 'react';
-import { Link } from 'react-router-dom';
 
 const NotFoundPage: React.FC = () => {
   return (

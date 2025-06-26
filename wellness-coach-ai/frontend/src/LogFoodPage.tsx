@@ -152,9 +152,6 @@ const LogFoodPage: React.FC = () => {
 };
 
 export default LogFoodPage;
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import LogoutButton from './LogoutButton';
 
 const LogFoodPage: React.FC = () => {
   const [food, setFood] = useState('');

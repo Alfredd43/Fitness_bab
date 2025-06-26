@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LogoutButton from './LogoutButton';
@@ -36,7 +35,7 @@ const LogExercisePage: React.FC = () => {
         <div className="px-4 py-6 sm:px-0">
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Log Exercise</h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Exercise Type</label>
