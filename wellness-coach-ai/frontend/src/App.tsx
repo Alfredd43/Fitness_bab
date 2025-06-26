@@ -12,6 +12,20 @@ import PrivateRoute from './PrivateRoute';
 import AICoachPage from './AICoachPage';
 import { useAuth } from './AuthContext';
 
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
+import PrivateRoute from './PrivateRoute';
+import LoginPage from './LoginPage';
+import RegisterPage from './RegisterPage';
+import DashboardPage from './DashboardPage';
+import LoggingPage from './LoggingPage';
+import LogExercisePage from './LogExercisePage';
+import LogFoodPage from './LogFoodPage';
+import LogWaterPage from './LogWaterPage';
+import AICoachPage from './AICoachPage';
+import NotFoundPage from './NotFoundPage';
+
 function AppRoutes() {
   const { user } = useAuth();
 

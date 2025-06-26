@@ -44,17 +44,24 @@ def register():
     password = data.get('password')
 
     if not username or not password:
-        return jsonify({'message': 'Missing username or password'}), 400
+        return jsonify({'message': 'Username and password are required'}), 400
 
-    if User.query.filter_by(username=username).first():
-        return jsonify({'message': 'Username already exists'}), 409
+    # Check if user already exists
+    existing_user = User.query.filter_by(username=username).first()
+    if existing_user:
+        return jsonify({'message': 'Username already exists'}), 400
 
-    hashed_password = generate_password_hash(password, method='sha256')
+    # Create new user
+    hashed_password = generate_password_hash(password)
     new_user = User(username=username, password=hashed_password)
 
-    db.session.add(new_user)
-    db.session.commit()
-    return jsonify({'message': 'User registered successfully'}), 201
+    try:
+        db.session.add(new_user)
+        db.session.commit()
+        return jsonify({'message': 'User created successfully'}), 201
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'message': 'Failed to create user'}), 500
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -62,19 +69,38 @@ def login():
     username = data.get('username')
     password = data.get('password')
 
+    if not username or not password:
+        return jsonify({'message': 'Username and password are required'}), 400
+
     user = User.query.filter_by(username=username).first()
 
-    if not user or not check_password_hash(user.password, password):
-        return jsonify({'message': 'Invalid username or password'}), 401
+    if user and check_password_hash(user.password, password):
+        login_user(user)
+        return jsonify({'id': user.id, 'username': user.username}), 200
 
-    login_user(user)
-    return jsonify({'message': 'Login successful', 'user': {'id': user.id, 'username': user.username}}), 200
+    return jsonify({'message': 'Invalid credentials'}), 401
 
 @app.route('/logout', methods=['POST'])
 @login_required
 def logout():
     logout_user()
-    return jsonify({'message': 'Logout successful'}), 200
+    return jsonify({'message': 'Logged out successfully'}), 200
+
+@app.route('/nutrition', methods=['POST'])
+@login_required
+def get_nutrition():
+    food_description = request.get_json().get('food_description')
+    if not food_description:
+        return jsonify({'message': 'Missing food description'}), 400
+
+    dummy_data = {
+        'food_description': food_description,
+        'calories': 'Approx. 350 kcal',
+        'protein': 'Approx. 10g',
+        'carbs': 'Approx. 50g',
+        'fat': 'Approx. 10g'
+    }
+    return jsonify(dummy_data), 200
 
 @app.route('/log_food', methods=['POST'])
 @login_required
@@ -143,22 +169,6 @@ def ai_coach():
     prompt = request.get_json().get('prompt', '')
     dummy_response = f"AI Placeholder response for: '{prompt}'"
     return jsonify({'advice': dummy_response}), 200
-
-@app.route('/get_nutrition', methods=['POST'])
-@login_required
-def get_nutrition():
-    food_description = request.get_json().get('food_description')
-    if not food_description:
-        return jsonify({'message': 'Missing food description'}), 400
-
-    dummy_data = {
-        'food_description': food_description,
-        'calories': 'Approx. 350 kcal',
-        'protein': 'Approx. 10g',
-        'carbs': 'Approx. 50g',
-        'fat': 'Approx. 10g'
-    }
-    return jsonify(dummy_data), 200
 
 if __name__ == '__main__':
     with app.app_context():
