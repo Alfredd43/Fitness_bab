@@ -1,0 +1,423 @@
+Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/RegisterPage.tsx:80:7
+  80 |  import React, { useState } from 'react';
+  81 |  import { useAuth } from './AuthContext';
+  82 |  import { useNavigate, Link } from 'react-router-dom';
+     |      ^
+  83 |
+  84 |  const RegisterPage: React.FC = () => {
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+12:50:37 pm [vite] Pre-transform error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LogoutButton.tsx: Identifier 'React' has already been declared. (23:7)
+
+  21 |
+  22 | export default LogoutButton;
+> 23 | import React from 'react';
+     |        ^
+  24 | import { useAuth } from './AuthContext';
+  25 | import { useNavigate } from 'react-router-dom';
+  26 |
+12:50:37 pm [vite] Pre-transform error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LogoutButton.tsx: Identifier 'React' has already been declared. (23:7)
+
+  21 |
+  22 | export default LogoutButton;
+> 23 | import React from 'react';
+     |        ^
+  24 | import { useAuth } from './AuthContext';
+  25 | import { useNavigate } from 'react-router-dom';
+  26 | (x2)
+12:50:37 pm [vite] Internal server error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LoggingPage.tsx: Identifier 'React' has already been declared. (36:7)
+
+  34 |
+  35 | export default LoggingPage;
+> 36 | import React from 'react';
+     |        ^
+  37 | import { Link } from 'react-router-dom';
+  38 | import LogoutButton from './LogoutButton';
+  39 |
+  Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/LoggingPage.tsx:36:7
+  35 |  export default LoggingPage;
+  36 |  import React from 'react';
+  37 |  import { Link } from 'react-router-dom';
+     |                 ^
+  38 |  import LogoutButton from './LogoutButton';
+  39 |
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+12:50:37 pm [vite] Internal server error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LogExercisePage.tsx: Identifier 'React' has already been declared. (109:7)
+
+  107 |
+  108 | export default LogExercisePage;
+> 109 | import React, { useState } from 'react';
+      |        ^
+  110 | import { Link } from 'react-router-dom';
+  111 | import LogoutButton from './LogoutButton';
+  112 |
+  Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/LogExercisePage.tsx:109:7
+  109|  import React, { useState } from 'react';
+  110|  import { Link } from 'react-router-dom';
+  111|  import LogoutButton from './LogoutButton';
+     |                                   ^
+  112|
+  113|  const LogExercisePage: React.FC = () => {
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+12:50:37 pm [vite] Internal server error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LogFoodPage.tsx: Identifier 'React' has already been declared. (155:7)
+
+  153 |
+  154 | export default LogFoodPage;
+> 155 | import React, { useState } from 'react';
+      |        ^
+  156 | import { Link } from 'react-router-dom';
+  157 | import LogoutButton from './LogoutButton';
+  158 |
+  Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/LogFoodPage.tsx:155:7
+  157|  import LogoutButton from './LogoutButton';
+  158|
+  159|  const LogFoodPage: React.FC = () => {
+     |                                     ^
+  160|    const [food, setFood] = useState('');
+  161|    const [quantity, setQuantity] = useState('');
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+12:50:37 pm [vite] Internal server error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LogWaterPage.tsx: Identifier 'React' has already been declared. (87:7)
+
+  85 |
+  86 | export default LogWaterPage;
+> 87 | import React, { useState } from 'react';
+     |        ^
+  88 | import { Link } from 'react-router-dom';
+  89 | import LogoutButton from './LogoutButton';
+  90 |
+  Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/LogWaterPage.tsx:87:7
+  87 |  import React, { useState } from 'react';
+  88 |  import { Link } from 'react-router-dom';
+  89 |  import LogoutButton from './LogoutButton';
+     |             ^
+  90 |
+  91 |  const LogWaterPage: React.FC = () => {
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+12:50:37 pm [vite] Internal server error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\NotFoundPage.tsx: Identifier 'React' has already been declared. (16:7)
+
+  14 |
+  15 | export default NotFoundPage;
+> 16 | import React from 'react';
+     |        ^
+  17 | import { Link } from 'react-router-dom';
+  18 |
+  19 | const NotFoundPage: React.FC = () => {
+  Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/NotFoundPage.tsx:16:7
+  14 |
+  15 |  export default NotFoundPage;
+  16 |  import React from 'react';
+     |                        ^
+  17 |  import { Link } from 'react-router-dom';
+  18 |
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+12:50:37 pm [vite] Internal server error: C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\src\LogoutButton.tsx: Identifier 'React' has already been declared. (23:7)
+
+  21 |
+  22 | export default LogoutButton;
+> 23 | import React from 'react';
+     |        ^
+  24 | import { useAuth } from './AuthContext';
+  25 | import { useNavigate } from 'react-router-dom';
+  26 |
+  Plugin: vite:react-babel
+  File: C:/Users/Alfred John/Fitness_bab-main/wellness-coach-ai/frontend/src/LogoutButton.tsx:23:7
+  22 |  export default LogoutButton;
+  23 |  import React from 'react';
+  24 |  import { useAuth } from './AuthContext';
+     |    ^
+  25 |  import { useNavigate } from 'react-router-dom';
+  26 |
+      at constructor (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:363:19)     
+      at TypeScriptParserMixin.raise (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:6609:19)
+      at TypeScriptScopeHandler.checkRedeclarationInScope (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1626:19)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:1592:12)
+      at TypeScriptScopeHandler.declareName (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:4892:11)
+      at TypeScriptParserMixin.declareNameFromIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7538:16)
+      at TypeScriptParserMixin.checkIdentifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7534:12)
+      at TypeScriptParserMixin.checkLVal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:7475:12)
+      at TypeScriptParserMixin.finishImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14184:10)
+      at TypeScriptParserMixin.parseImportSpecifierLocal (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14181:31)
+      at TypeScriptParserMixin.maybeParseDefaultImportSpecifier (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14288:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14157:29)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14153:17)
+      at TypeScriptParserMixin.parseImport (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9382:26)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12795:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:9469:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12685:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12662:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13235:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:13228:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12541:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:12531:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14410:10)
+      at TypeScriptParserMixin.parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:10086:18)
+      at parse (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\parser\lib\index.js:14444:38)
+      at parser (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\parser\index.js:41:34)      
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transformation\index.js:22:50) 
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\transform.js:22:33)      
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:189:28
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend\node_modules\gensync\index.js:223:11) 
+PS C:\Users\Alfred John\Fitness_bab-main\wellness-coach-ai\frontend> 
