@@ -1,20 +1,7 @@
 
-import { Routes, Route, Navigate } from 'react-router-dom';
-import LoginPage from './LoginPage';
-import RegisterPage from './RegisterPage';
-import DashboardPage from './DashboardPage';
-import LoggingPage from './LoggingPage';
-import LogExercisePage from './LogExercisePage';
-import LogFoodPage from './LogFoodPage';
-import LogWaterPage from './LogWaterPage';
-import NotFoundPage from './NotFoundPage';
-import PrivateRoute from './PrivateRoute';
-import AICoachPage from './AICoachPage';
-import { useAuth } from './AuthContext';
-
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth } from './AuthContext';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './AuthContext';
 import PrivateRoute from './PrivateRoute';
 import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
@@ -94,7 +81,13 @@ function AppRoutes() {
 }
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <AuthProvider>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </AuthProvider>
+  );
 }
 
 export default App;
