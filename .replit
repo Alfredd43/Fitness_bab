@@ -6,3 +6,15 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "node index.js"]
+
+[workflows]
+runButton = "Run Frontend"
+
+[[workflows.workflow]]
+name = "Run Frontend"
+author = 37172618
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd wellness-coach-ai/frontend && npm run dev -- --host 0.0.0.0 --port 5173"
