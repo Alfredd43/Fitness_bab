@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Smart Loan Recovery System{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <!-- File Upload Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <input type="file" id="fileInput" accept=".csv" style="display: none;">
+                    <button class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-upload me-2"></i>Upload CSV File
+                    </button>
+                    <span id="fileName" class="ms-3 text-muted"></span>
+                    <div id="uploadStatus" class="mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary Row -->
+    <div class="row mb-3">
+        <div class="col-md-3 mb-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="text-info" id="portfolioValue">$0</h4>
+                    <small>Portfolio Value</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="text-success" id="recoveryRate">0%</h4>
+                    <small>Recovery Rate</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-header"><b>Recovery Status Distribution</b></div>
+                <div class="card-body">
+                    <div id="recoveryChart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <div class="card-header"><b>Recovery Rate by Overdue Days</b></div>
+                <div class="card-body">
+                    <div id="overdueChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header"><b>Loan Predictions</b></div>
+                <div class="card-body table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Loan Amount</th>
+                                <th>Overdue Days</th>
+                                <th>Credit Score</th>
+                                <th>Region</th>
+                                <th>Recovery Status</th>
+                                <th>Probability</th>
+                                <th>Cluster</th>
+                                <th>Recommendations</th>
+                            </tr>
+                        </thead>
+                        <tbody id="predictionsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let allData = [];
+let filteredData = [];
+
+document.getElementById('fileInput').addEventListener('change', handleFileUpload);
+
+function handleFileUpload() {
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+    if (!file) return;
+    document.getElementById('fileName').textContent = file.name;
+    if (!file.name.endsWith('.csv')) {
+        document.getElementById('uploadStatus').innerHTML = '<span class="text-danger">Please upload a CSV file.</span>';
+        return;
+    }
+    const formData = new FormData();
+    formData.append('file', file);
+    document.getElementById('uploadStatus').innerHTML = '<span class="text-info">Uploading...</span>';
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById('uploadStatus').innerHTML = `<span class="text-danger">${data.error}</span>`;
+        } else {
+            document.getElementById('uploadStatus').innerHTML = '<span class="text-success">Upload successful! Data loaded.</span>';
+            loadDashboard();
+        }
+    })
+    .catch(error => {
+        document.getElementById('uploadStatus').innerHTML = `<span class="text-danger">Error: ${error}</span>`;
+    });
+}
+
+// Load dashboard data
+function loadDashboard() {
+    fetch('/dashboard_data')
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.error('Error loading dashboard:', data.error);
+                return;
+            }
+            allData = data.data || [];
+            filteredData = data.data || [];
+            updateSummary(data.summary);
+            if (data.charts && data.charts.recovery) {
+                Plotly.newPlot('recoveryChart', JSON.parse(data.charts.recovery));
+            }
+            if (data.charts && data.charts.overdue) {
+                Plotly.newPlot('overdueChart', JSON.parse(data.charts.overdue));
+            }
+            updateDataTable();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function updateSummary(summary) {
+    document.getElementById('portfolioValue').textContent = `$${(summary.total_portfolio_value/1000000).toFixed(1)}M`;
+    document.getElementById('recoveryRate').textContent = `${(summary.recovery_rate*100).toFixed(1)}%`;
+}
+
+function updateDataTable() {
+    const tableBody = document.getElementById('predictionsTableBody');
+    if (!tableBody || !filteredData) return;
+    tableBody.innerHTML = '';
+    filteredData.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>$${item.loan_amount.toLocaleString()}</td>
+            <td>${item.overdue_days}</td>
+            <td>${item.credit_score}</td>
+            <td>${item.region || 'N/A'}</td>
+            <td><span class="badge ${getStatusBadgeClass(item.recovery_label)}">${item.recovery_label}</span></td>
+            <td>${(item.probability * 100).toFixed(1)}%</td>
+            <td>${item.cluster}</td>
+            <td><button class="btn btn-sm btn-outline-primary" onclick="showRecommendations(${item.loan_amount}, ${item.overdue_days}, ${item.credit_score}, '${item.recovery_label}', ${item.probability}, ${item.cluster})"><i class="fas fa-lightbulb"></i></button></td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+function getStatusBadgeClass(status) {
+    switch (status) {
+        case 'Recoverable': return 'bg-success';
+        case 'Risky': return 'bg-warning';
+        case 'Unrecoverable': return 'bg-danger';
+        default: return 'bg-secondary';
+    }
+}
+
+function showRecommendations(loanAmount, overdueDays, creditScore, recoveryLabel, probability, cluster) {
+    fetch('/recommendations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ loan_amount: loanAmount, overdue_days: overdueDays, credit_score: creditScore, recovery_label: recoveryLabel, probability: probability, cluster: cluster })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert('Error loading recommendations: ' + data.error);
+            return;
+        }
+        const modalContent = `
+            <div class="modal-header">
+                <h5 class="modal-title">Recovery Recommendations</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <strong>Loan Amount:</strong> $${loanAmount.toLocaleString()}<br>
+                        <strong>Overdue Days:</strong> ${overdueDays}<br>
+                        <strong>Credit Score:</strong> ${creditScore}
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Recovery Status:</strong> <span class="badge ${getStatusBadgeClass(recoveryLabel)}">${recoveryLabel}</span><br>
+                        <strong>Probability:</strong> ${(probability * 100).toFixed(1)}%<br>
+                        <strong>Cluster:</strong> ${cluster}
+                    </div>
+                </div>
+                <div class="recommendations">
+                    <h6>Recommended Actions:</h6>
+                    <ul>${data.recommendations.map(rec => `<li>${rec}</li>`).join('')}</ul>
+                </div>
+            </div>
+        `;
+        const modal = document.createElement('div');
+        modal.className = 'modal fade';
+        modal.innerHTML = `<div class="modal-dialog modal-lg"><div class="modal-content">${modalContent}</div></div>`;
+        document.body.appendChild(modal);
+        const bootstrapModal = new bootstrap.Modal(modal);
+        bootstrapModal.show();
+        modal.addEventListener('hidden.bs.modal', () => { document.body.removeChild(modal); });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error loading recommendations');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadDashboard();
+});
+</script>
+{% endblock %} 

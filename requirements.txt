@@ -1,0 +1,12 @@
+flask==3.0.0
+scikit-learn==1.4.0
+pandas==2.2.0
+numpy==1.26.0
+boto3==1.34.0
+plotly==5.18.0
+dash==2.16.0
+dash-bootstrap-components==1.5.0
+python-dotenv==1.0.0
+flask-login==0.6.3
+werkzeug==3.0.1
+gunicorn==21.2.0 

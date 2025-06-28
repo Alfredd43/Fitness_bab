@@ -1,0 +1,543 @@
+{% extends "base.html" %}
+
+{% block title %}Recovery Recommendations - Smart Loan Recovery System{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h2><i class="fas fa-lightbulb me-2"></i>Recovery Recommendations</h2>
+        <p class="text-muted">Strategic guidance for loan recovery based on AI predictions</p>
+    </div>
+</div>
+
+<!-- Recovery Strategies -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-chess me-2"></i>Recovery Strategies by Risk Level</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 border-success">
+                            <div class="card-header bg-success text-white">
+                                <h6><i class="fas fa-check-circle me-2"></i>Recoverable Loans</h6>
+                            </div>
+                            <div class="card-body">
+                                <h6>Probability: 70-100%</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-phone text-success me-2"></i>Gentle reminder calls</li>
+                                    <li><i class="fas fa-envelope text-success me-2"></i>Friendly email reminders</li>
+                                    <li><i class="fas fa-percentage text-success me-2"></i>5% early payment discount</li>
+                                    <li><i class="fas fa-calendar text-success me-2"></i>Flexible payment plans</li>
+                                    <li><i class="fas fa-clock text-success me-2"></i>3-day follow-up schedule</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 border-warning">
+                            <div class="card-header bg-warning text-dark">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Risky Loans</h6>
+                            </div>
+                            <div class="card-body">
+                                <h6>Probability: 40-70%</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-phone text-warning me-2"></i>Urgent reminder calls</li>
+                                    <li><i class="fas fa-envelope text-warning me-2"></i>Formal demand letters</li>
+                                    <li><i class="fas fa-percentage text-warning me-2"></i>10% payment discount</li>
+                                    <li><i class="fas fa-exchange-alt text-warning me-2"></i>Loan restructuring</li>
+                                    <li><i class="fas fa-clock text-warning me-2"></i>Immediate follow-up</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 border-danger">
+                            <div class="card-header bg-danger text-white">
+                                <h6><i class="fas fa-times-circle me-2"></i>Unrecoverable Loans</h6>
+                            </div>
+                            <div class="card-body">
+                                <h6>Probability: 0-40%</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-gavel text-danger me-2"></i>Legal proceedings</li>
+                                    <li><i class="fas fa-envelope text-danger me-2"></i>Final demand notices</li>
+                                    <li><i class="fas fa-building text-danger me-2"></i>Collection agency</li>
+                                    <li><i class="fas fa-file-contract text-danger me-2"></i>Debt settlement</li>
+                                    <li><i class="fas fa-chart-line text-danger me-2"></i>Write-off consideration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Best Practices -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-star me-2"></i>Best Practices</h5>
+            </div>
+            <div class="card-body">
+                <div class="accordion" id="bestPracticesAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#practice1">
+                                Early Intervention
+                            </button>
+                        </h2>
+                        <div id="practice1" class="accordion-collapse collapse show" data-bs-parent="#bestPracticesAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Contact borrowers within 24 hours of missed payment</li>
+                                    <li>Use multiple communication channels</li>
+                                    <li>Document all interactions</li>
+                                    <li>Offer payment assistance programs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#practice2">
+                                Communication Strategy
+                            </button>
+                        </h2>
+                        <div id="practice2" class="accordion-collapse collapse" data-bs-parent="#bestPracticesAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Be professional and empathetic</li>
+                                    <li>Listen to borrower's situation</li>
+                                    <li>Offer realistic payment solutions</li>
+                                    <li>Follow up consistently</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#practice3">
+                                Legal Compliance
+                            </button>
+                        </h2>
+                        <div id="practice3" class="accordion-collapse collapse" data-bs-parent="#bestPracticesAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Follow Fair Debt Collection Practices Act</li>
+                                    <li>Respect borrower rights</li>
+                                    <li>Maintain accurate records</li>
+                                    <li>Use approved collection methods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-chart-line me-2"></i>Performance Metrics</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-6 mb-3">
+                        <div class="border rounded p-3">
+                            <h4 class="text-success">85%</h4>
+                            <small>Recovery Rate (Target)</small>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="border rounded p-3">
+                            <h4 class="text-info">24h</h4>
+                            <small>Response Time</small>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="border rounded p-3">
+                            <h4 class="text-warning">3</h4>
+                            <small>Contact Attempts</small>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <div class="border rounded p-3">
+                            <h4 class="text-primary">30d</h4>
+                            <small>Resolution Time</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-3">
+                    <h6>Key Performance Indicators:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Recovery rate by risk category</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Average time to resolution</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Cost per recovery</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Customer satisfaction score</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recovery Tools -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-tools me-2"></i>Recovery Tools & Resources</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                                <h6>Call Scripts</h6>
+                                <p class="small">Professional conversation templates for different scenarios</p>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showCallScripts()">
+                                    View Scripts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                                <h6>Email Templates</h6>
+                                <p class="small">Pre-written email templates for various recovery stages</p>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showEmailTemplates()">
+                                    View Templates
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-file-contract fa-2x text-primary mb-3"></i>
+                                <h6>Legal Documents</h6>
+                                <p class="small">Standard legal forms and demand letters</p>
+                                <button class="btn btn-sm btn-outline-primary" onclick="showLegalDocuments()">
+                                    View Documents
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 mb-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-chart-bar fa-2x text-primary mb-3"></i>
+                                <h6>Analytics Dashboard</h6>
+                                <p class="small">Real-time recovery performance metrics</p>
+                                <a href="{{ url_for('dashboard') }}" class="btn btn-sm btn-outline-primary">View Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Stories -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fas fa-trophy me-2"></i>Success Stories</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-success">
+                            <div class="card-body">
+                                <h6 class="text-success">High-Value Recovery</h6>
+                                <p class="small">Recovered $500K loan through strategic negotiation and payment restructuring.</p>
+                                <small class="text-muted">Recovery Rate: 95%</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h6 class="text-warning">Risky Case Turnaround</h6>
+                                <p class="small">Converted risky loan to recoverable through early intervention and empathy.</p>
+                                <small class="text-muted">Recovery Rate: 78%</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-info">
+                            <div class="card-body">
+                                <h6 class="text-info">Bulk Recovery</h6>
+                                <p class="small">Successfully recovered 85% of portfolio through systematic approach.</p>
+                                <small class="text-muted">Recovery Rate: 85%</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call Scripts Modal -->
+<div class="modal fade" id="callScriptsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Call Scripts</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="callScriptsAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#script1">
+                                Initial Contact Script
+                            </button>
+                        </h2>
+                        <div id="script1" class="accordion-collapse collapse show" data-bs-parent="#callScriptsAccordion">
+                            <div class="accordion-body">
+                                <h6>Opening:</h6>
+                                <p>"Hello [Name], this is [Your Name] from [Bank Name]. I'm calling regarding your loan account [Account Number]. How are you today?"</p>
+                                
+                                <h6>Purpose:</h6>
+                                <p>"I noticed your payment of $[Amount] was due on [Date] and hasn't been received yet. I wanted to check in and see if there's anything we can help you with."</p>
+                                
+                                <h6>Listen & Empathize:</h6>
+                                <p>"I understand that financial situations can be challenging. What's been happening that's made it difficult to make this payment?"</p>
+                                
+                                <h6>Offer Solutions:</h6>
+                                <p>"We have several options that might help: payment plans, temporary deferments, or restructuring. What would work best for your situation?"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#script2">
+                                Follow-up Script
+                            </button>
+                        </h2>
+                        <div id="script2" class="accordion-collapse collapse" data-bs-parent="#callScriptsAccordion">
+                            <div class="accordion-body">
+                                <h6>Opening:</h6>
+                                <p>"Hello [Name], this is [Your Name] following up on our conversation from [Date]. How are things going with the payment arrangement we discussed?"</p>
+                                
+                                <h6>Check Progress:</h6>
+                                <p>"I wanted to see if you've been able to make any progress on the payment, or if you need any adjustments to the plan we discussed."</p>
+                                
+                                <h6>Reinforce Options:</h6>
+                                <p>"Remember, we're here to help. If the current arrangement isn't working, we can explore other options together."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#script3">
+                                Final Notice Script
+                            </button>
+                        </h2>
+                        <div id="script3" class="accordion-collapse collapse" data-bs-parent="#callScriptsAccordion">
+                            <div class="accordion-body">
+                                <h6>Opening:</h6>
+                                <p>"Hello [Name], this is [Your Name] from [Bank Name]. I'm calling regarding your seriously overdue loan account [Account Number]."</p>
+                                
+                                <h6>Urgency:</h6>
+                                <p>"This account is now [X] days past due, and we need to resolve this immediately to avoid further consequences."</p>
+                                
+                                <h6>Final Options:</h6>
+                                <p>"We can still work together to resolve this, but we need immediate action. What can you commit to today?"</p>
+                                
+                                <h6>Consequences:</h6>
+                                <p>"If we can't reach an agreement today, we'll need to proceed with legal action, which will affect your credit and may result in additional costs."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Email Templates Modal -->
+<div class="modal fade" id="emailTemplatesModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Email Templates</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="emailTemplatesAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#email1">
+                                Friendly Reminder
+                            </button>
+                        </h2>
+                        <div id="email1" class="accordion-collapse collapse show" data-bs-parent="#emailTemplatesAccordion">
+                            <div class="accordion-body">
+                                <h6>Subject: Payment Reminder - Account [Account Number]</h6>
+                                <p>Dear [Name],</p>
+                                <p>I hope this email finds you well. I wanted to remind you that your payment of $[Amount] was due on [Date] for your loan account [Account Number].</p>
+                                <p>If you've already made this payment, please disregard this message. If you're experiencing any difficulties, please don't hesitate to contact us. We're here to help and can discuss payment arrangements that might work better for your situation.</p>
+                                <p>You can reach me at [Phone Number] or reply to this email.</p>
+                                <p>Thank you for your attention to this matter.</p>
+                                <p>Best regards,<br>[Your Name]<br>[Bank Name]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#email2">
+                                Formal Demand Letter
+                            </button>
+                        </h2>
+                        <div id="email2" class="accordion-collapse collapse" data-bs-parent="#emailTemplatesAccordion">
+                            <div class="accordion-body">
+                                <h6>Subject: URGENT - Payment Demand - Account [Account Number]</h6>
+                                <p>Dear [Name],</p>
+                                <p>This letter serves as formal notice that your loan account [Account Number] is seriously past due. The outstanding balance of $[Amount] was due on [Date] and remains unpaid.</p>
+                                <p>This delinquency may result in:</p>
+                                <ul>
+                                    <li>Negative reporting to credit bureaus</li>
+                                    <li>Additional late fees and penalties</li>
+                                    <li>Legal action to recover the debt</li>
+                                </ul>
+                                <p>To avoid these consequences, please contact us immediately at [Phone Number] to discuss payment arrangements.</p>
+                                <p>This is your final opportunity to resolve this matter before we proceed with legal action.</p>
+                                <p>Sincerely,<br>[Your Name]<br>[Bank Name]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Legal Documents Modal -->
+<div class="modal fade" id="legalDocumentsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Legal Documents</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="legalDocumentsAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#legal1">
+                                Final Demand Letter
+                            </button>
+                        </h2>
+                        <div id="legal1" class="accordion-collapse collapse show" data-bs-parent="#legalDocumentsAccordion">
+                            <div class="accordion-body">
+                                <h6>FINAL DEMAND LETTER</h6>
+                                <p><strong>Date:</strong> [Current Date]<br>
+                                <strong>To:</strong> [Borrower Name]<br>
+                                <strong>Account:</strong> [Account Number]<br>
+                                <strong>Amount Due:</strong> $[Amount]</p>
+                                
+                                <p>This is your FINAL NOTICE regarding the outstanding balance of $[Amount] on your loan account [Account Number].</p>
+                                
+                                <p>Despite our previous attempts to collect this debt, payment has not been received. You have [X] days from the date of this letter to pay the full amount or contact us to make payment arrangements.</p>
+                                
+                                <p>If payment is not received within this timeframe, we will proceed with legal action to recover the debt, which may include:</p>
+                                <ul>
+                                    <li>Filing a lawsuit</li>
+                                    <li>Obtaining a judgment</li>
+                                    <li>Garnishing wages or bank accounts</li>
+                                    <li>Placing liens on property</li>
+                                </ul>
+                                
+                                <p>Contact us immediately at [Phone Number] to resolve this matter.</p>
+                                
+                                <p>Sincerely,<br>[Bank Name]<br>[Address]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#legal2">
+                                Payment Plan Agreement
+                            </button>
+                        </h2>
+                        <div id="legal2" class="accordion-collapse collapse" data-bs-parent="#legalDocumentsAccordion">
+                            <div class="accordion-body">
+                                <h6>PAYMENT PLAN AGREEMENT</h6>
+                                <p><strong>Date:</strong> [Current Date]<br>
+                                <strong>Borrower:</strong> [Name]<br>
+                                <strong>Account:</strong> [Account Number]<br>
+                                <strong>Total Amount:</strong> $[Amount]</p>
+                                
+                                <p><strong>Payment Schedule:</strong></p>
+                                <ul>
+                                    <li>Payment 1: $[Amount] due [Date]</li>
+                                    <li>Payment 2: $[Amount] due [Date]</li>
+                                    <li>Payment 3: $[Amount] due [Date]</li>
+                                </ul>
+                                
+                                <p><strong>Terms:</strong></p>
+                                <ul>
+                                    <li>All payments must be made on or before the due date</li>
+                                    <li>Late payments will result in additional fees</li>
+                                    <li>Default on any payment voids this agreement</li>
+                                    <li>Legal action may proceed if payments are missed</li>
+                                </ul>
+                                
+                                <p><strong>Borrower Signature:</strong> _________________<br>
+                                <strong>Date:</strong> _________________</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function showCallScripts() {
+    const modal = new bootstrap.Modal(document.getElementById('callScriptsModal'));
+    modal.show();
+}
+
+function showEmailTemplates() {
+    const modal = new bootstrap.Modal(document.getElementById('emailTemplatesModal'));
+    modal.show();
+}
+
+function showLegalDocuments() {
+    const modal = new bootstrap.Modal(document.getElementById('legalDocumentsModal'));
+    modal.show();
+}
+</script>
+{% endblock %} 

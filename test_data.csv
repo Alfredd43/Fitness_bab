@@ -1,0 +1,6 @@
+loan_amount,overdue_days,credit_score,region
+50000,15,720,North
+75000,30,650,South
+120000,45,580,East
+30000,10,750,West
+90000,60,520,North 

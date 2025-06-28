@@ -1,9 +1,0 @@
-Flask
-Flask-SQLAlchemy
-Flask-Login
-Werkzeug
-mysql-connector-python
-pymysql
-python-dotenv
-requests
-
